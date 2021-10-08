@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script data-cfasync="false" type="text/javascript">var ewww_webp_supported=!1;function check_webp_feature(A,e){if(e=void 0!==e?e:function(){},ewww_webp_supported)e(ewww_webp_supported);else{var w=new Image;w.onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A]}}check_webp_feature("alpha");</script><script data-cfasync="false" type="text/javascript">var Arrive=function(c,e,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,t,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return void 0===e||"number"==typeof e.length&&e!==c||(e=[e]),e}}),d=((t=function(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}).prototype.addEvent=function(e,t,r,a){var i={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(i),this._eventsBucket.push(i),i},t.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)if(e(t)){this._beforeRemoving&&this._beforeRemoving(t);var a=this._eventsBucket.splice(r,1);a&&a.length&&(a[0].callback=null)}},t.prototype.beforeAdding=function(e){this._beforeAdding=e},t.prototype.beforeRemoving=function(e){this._beforeRemoving=e},t),o=function(i,n){var o=new d,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e,r=t.target;r!==c.document&&r!==c||(r=document.getElementsByTagName("html")[0]),e=new MutationObserver(function(e){n.call(this,e,t)});var a=i(t.options);e.observe(r,a),t.observer=e,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var e,a=u.toElementsArray(this),i=r;e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1},o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id))||(t.firedElems.push(e._id),0))}var c=(i=new o(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},l=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(l=new o(function(){return{childList:!0,subtree:!0}},function(e,a){e.forEach(function(e){var t=e.removedNodes,r=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,a,i,r),u.callCallbacks(r,a)})})).bindEvent;return l.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},l};e&&g(e.fn),g(HTMLElement.prototype),g(NodeList.prototype),g(HTMLCollection.prototype),g(HTMLDocument.prototype),g(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(l,n,"unbindAllLeave"),n}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function g(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=l.bindEvent,s(l,e,"unbindLeave")}}(window,"undefined"==typeof jQuery?null:jQuery,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){if(ewww_webp_supported)t(ewww_webp_supported);else{var r=new Image;r.onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e]}}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(r=0,a=(n=document.querySelectorAll(".rev_slider ul li")).length;r<a;r++){ewwwAttr(n[r],"data-thumb",n[r].getAttribute("data-webp-thumb"));for(var i=1;i<11;)ewwwAttr(n[r],"data-param"+i,n[r].getAttribute("data-webp-param"+i)),i++}var n;for(r=0,a=(n=document.querySelectorAll(".rev_slider img")).length;r<a;r++)ewwwAttr(n[r],"data-lazyload",n[r].getAttribute("data-webp-lazyload"));var o=document.querySelectorAll("div.woocommerce-product-gallery__image");for(r=0,a=o.length;r<a;r++)ewwwAttr(o[r],"data-thumb",o[r].getAttribute("data-webp-thumb"))}var l=document.querySelectorAll("video");for(r=0,a=l.length;r<a;r++)ewwwAttr(l[r],"poster",e?l[r].getAttribute("data-poster-webp"):l[r].getAttribute("data-poster-image"));var s=document.querySelectorAll("img.ewww_webp_lazy_load");for(r=0,a=s.length;r<a;r++){if(e){ewwwAttr(s[r],"data-lazy-srcset",s[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(s[r],"data-srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"data-lazy-src",s[r].getAttribute("data-lazy-src-webp")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file"));var c=s[r].getAttribute("srcset");null!=c&&!1!==c&&c.includes("R0lGOD")&&ewwwAttr(s[r],"src",s[r].getAttribute("data-lazy-src-webp"))}s[r].className=s[r].className.replace(/\bewww_webp_lazy_load\b/,"")}var w=document.querySelectorAll(".ewww_webp");for(r=0,a=w.length;r<a;r++)e?(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-webp")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-webp")),ewwwAttr(w[r],"data-orig-file",w[r].getAttribute("data-webp-orig-file")),ewwwAttr(w[r],"data-medium-file",w[r].getAttribute("data-webp-medium-file")),ewwwAttr(w[r],"data-large-file",w[r].getAttribute("data-webp-large-file")),ewwwAttr(w[r],"data-large_image",w[r].getAttribute("data-webp-large_image")),ewwwAttr(w[r],"data-src",w[r].getAttribute("data-webp-src"))):(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-img")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-img"))),w[r].className=w[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8GBs5tU1E.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/ea/opensanshebrewcondensed/v3/OpenSansHebrewCondensed-Bold.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/pathwaygothicone/v9/MwQrbgD32-KAvjkYGNUUxAtW7pEBwx-tS1Zf.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/ea/opensanshebrewcondensed/v3/OpenSansHebrewCondensed-Regular.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/ea/opensanshebrewcondensed/v3/OpenSansHebrewCondensed-Light.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/sueellenfrancisco/v11/wXK3E20CsoJ9j1DDkjHcQ5ZL8xRaxru9no1P2w.woff2" data-wpacu-preload-font="1" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" data-wpacu-preload-font="1" crossorigin>
+
+<title>Curso EAD Micropigmentação Capilar - EstétikCursos</title>
+<meta name="description" content="A EstétiKCursos é uma escola EAD onde não formamos somente alunas, mas sim profissionais que são capacitados a exercer na área da Estética." />
+<link rel="canonical" href="https://estetikcursos.com.br/micropigmentacao-capilar/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Curso EAD Micropigmentação Capilar - EstétikCursos" />
+<meta property="og:description" content="A EstétiKCursos é uma escola EAD onde não formamos somente alunas, mas sim profissionais que são capacitados a exercer na área da Estética." />
+<meta property="og:url" content="https://estetikcursos.com.br/micropigmentacao-capilar/" />
+<meta property="og:site_name" content="EstétikCursos" />
+<meta property="article:publisher" content="https://www.facebook.com/EstetikCursosOnline.Oficial" />
+<meta property="article:modified_time" content="2021-09-12T14:11:36+00:00" />
+<meta property="og:image" content="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-EstetikCursos-Destaque.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:label1" content="Est. tempo de leitura" />
+<meta name="twitter:data1" content="6 minutos" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://estetikcursos.com.br/#organization","name":"Est\u00e9tiK - Cursos Online","url":"https://estetikcursos.com.br/","sameAs":["https://www.facebook.com/EstetikCursosOnline.Oficial","https://instagram.com/estetikcursosoficial","https://www.youtube.com/MichelSantanapmu/"],"logo":{"@type":"ImageObject","@id":"https://estetikcursos.com.br/#logo","inLanguage":"pt-BR","url":"https://estetikcursos.com.br/wp-content/uploads/2020/08/Logo-novo01.png","contentUrl":"https://estetikcursos.com.br/wp-content/uploads/2020/08/Logo-novo01.png","width":870,"height":400,"caption":"Est\u00e9tiK - Cursos Online"},"image":{"@id":"https://estetikcursos.com.br/#logo"}},{"@type":"WebSite","@id":"https://estetikcursos.com.br/#website","url":"https://estetikcursos.com.br/","name":"Est\u00e9tiK - Cursos Online","description":"Cursos Online","publisher":{"@id":"https://estetikcursos.com.br/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://estetikcursos.com.br/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"pt-BR"},{"@type":"ImageObject","@id":"https://estetikcursos.com.br/micropigmentacao-capilar/#primaryimage","inLanguage":"pt-BR","url":"https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-EstetikCursos-Destaque.png","contentUrl":"https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-EstetikCursos-Destaque.png","width":512,"height":512,"caption":"Logo Est\u00e9tikCursos"},{"@type":"WebPage","@id":"https://estetikcursos.com.br/micropigmentacao-capilar/#webpage","url":"https://estetikcursos.com.br/micropigmentacao-capilar/","name":"Curso EAD Micropigmenta\u00e7\u00e3o Capilar - Est\u00e9tikCursos","isPartOf":{"@id":"https://estetikcursos.com.br/#website"},"primaryImageOfPage":{"@id":"https://estetikcursos.com.br/micropigmentacao-capilar/#primaryimage"},"datePublished":"2020-07-23T15:33:00+00:00","dateModified":"2021-09-12T14:11:36+00:00","description":"A Est\u00e9tiKCursos \u00e9 uma escola EAD onde n\u00e3o formamos somente alunas, mas sim profissionais que s\u00e3o capacitados a exercer na \u00e1rea da Est\u00e9tica.","breadcrumb":{"@id":"https://estetikcursos.com.br/micropigmentacao-capilar/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://estetikcursos.com.br/micropigmentacao-capilar/"]}]},{"@type":"BreadcrumbList","@id":"https://estetikcursos.com.br/micropigmentacao-capilar/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"In\u00edcio","item":"https://estetikcursos.com.br/"},{"@type":"ListItem","position":2,"name":"[07] Micropigmenta\u00e7\u00e3o Capilar"}]}]}</script>
+
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Feed para EstétikCursos &raquo;" href="https://estetikcursos.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para EstétikCursos &raquo;" href="https://estetikcursos.com.br/comments/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://estetikcursos.com.br/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='c769ebb36-css' href='https://estetikcursos.com.br/wp-content/uploads/essential-addons-elementor/c769ebb36.min.css?ver=1633660016' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://estetikcursos.com.br/wp-content/themes/hello-elementor/style.min.css?ver=2.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://estetikcursos.com.br/wp-content/themes/hello-elementor/theme.min.css?ver=2.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0' type='text/css' media='all' />
+<style id='elementor-icons-inline-css' type='text/css'>
+
+		.elementor-add-new-section .elementor-add-templately-promo-button{
+            background-color: #5d4fff;
+            background-image: url(https://estetikcursos.com.br/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-left: 5px;
+            position: relative;
+            bottom: 5px;
+        }
+</style>
+<link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.4' type='text/css' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+@font-face{font-family:eicons;src:url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel='stylesheet' id='elementor-post-7-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-7.css?ver=1633443062' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/global.css?ver=1633443063' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-919-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-919.css?ver=1633444521' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-15976-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-15976.css?ver=1633443064' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-9361-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-9361.css?ver=1633443064' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-9519-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-9519.css?ver=1633443065' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-211-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-211.css?ver=1633443065' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRye%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CArvo%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CTeko%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPathway+Gothic+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google-earlyaccess-2-css' href='https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://estetikcursos.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://estetikcursos.com.br/wp-json/wp/v2/pages/919" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://estetikcursos.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://estetikcursos.com.br/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.8.1" />
+<link rel='shortlink' href='https://estetikcursos.com.br/?p=919' />
+<link rel="alternate" type="application/json+oembed" href="https://estetikcursos.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Festetikcursos.com.br%2Fmicropigmentacao-capilar%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://estetikcursos.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Festetikcursos.com.br%2Fmicropigmentacao-capilar%2F&#038;format=xml" />
+
+
+<script data-type="lazy" data-src="data:text/javascript;base64,DQogICFmdW5jdGlvbihmLGIsZSx2LG4sdCxzKQ0KICB7aWYoZi5mYnEpcmV0dXJuO249Zi5mYnE9ZnVuY3Rpb24oKXtuLmNhbGxNZXRob2Q/DQogIG4uY2FsbE1ldGhvZC5hcHBseShuLGFyZ3VtZW50cyk6bi5xdWV1ZS5wdXNoKGFyZ3VtZW50cyl9Ow0KICBpZighZi5fZmJxKWYuX2ZicT1uO24ucHVzaD1uO24ubG9hZGVkPSEwO24udmVyc2lvbj0nMi4wJzsNCiAgbi5xdWV1ZT1bXTt0PWIuY3JlYXRlRWxlbWVudChlKTt0LmFzeW5jPSEwOw0KICB0LnNyYz12O3M9Yi5nZXRFbGVtZW50c0J5VGFnTmFtZShlKVswXTsNCiAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZSh0LHMpfSh3aW5kb3csIGRvY3VtZW50LCdzY3JpcHQnLA0KICAnaHR0cHM6Ly9jb25uZWN0LmZhY2Vib29rLm5ldC9lbl9VUy9mYmV2ZW50cy5qcycpOw0KICBmYnEoJ2luaXQnLCAnMjY3NjY0NTkwOTAwMDUxJyk7DQogIGZicSgnaW5pdCcsICczMTI0NTY3MzMwNzI5NjAnKTsNCiAgZmJxKCdpbml0JywgJzc5NjY4MTAwNDQ3MDM0NycpOw0KICBmYnEoJ2luaXQnLCAnMTg1NzIzNTk5NDQ0NDcyMCcpOw0KICBmYnEoJ2luaXQnLCAnNDMwMDg5ODA1OTk0MTE4MicpOw0KICBmYnEoJ3RyYWNrJywgJ1BhZ2VWaWV3Jyk7DQogIGZicSgndHJhY2snLCAnVmlld0VzdGV0aWthJyk7DQo="></script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=267664590900051&ev=PageView&noscript=1"
+/></noscript>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=312456733072960&ev=PageView&noscript=1"
+/></noscript>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=796681004470347&ev=PageView&noscript=1"
+/></noscript>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1857235994444720&ev=PageView&noscript=1"
+/></noscript>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4300898059941182&ev=PageView&noscript=1"
+/></noscript>
+
+
+
+
+<script async data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=AW-589681044"></script>
+<script data-type="lazy" data-src="data:text/javascript;base64,DQogIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdOw0KICBmdW5jdGlvbiBndGFnKCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKTt9DQogIGd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQoJDQoJZ3RhZygnY29uZmlnJywgJ0FXLTU4OTY4MTA0NCcpOw0K"></script>
+<script data-type="lazy" data-src="data:text/javascript;base64,DQogIGd0YWcoJ2V2ZW50JywgJ3BhZ2VfdmlldycsIHsNCiAgICAnc2VuZF90byc6ICdBVy01ODk2ODEwNDQnLA0KICAgICd2YWx1ZSc6ICdyZXBsYWNlIHdpdGggdmFsdWUnLA0KICAgICdpdGVtcyc6IFt7DQogICAgICAnaWQnOiAncmVwbGFjZSB3aXRoIHZhbHVlJywNCiAgICAgICdnb29nbGVfYnVzaW5lc3NfdmVydGljYWwnOiAncmV0YWlsJw0KICAgIH1dDQogIH0pOw0K"></script>
+
+
+<script data-ad-client="ca-pub-1938461881974724" async data-type="lazy" data-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script data-type="lazy" data-src="data:text/javascript;base64,KGZ1bmN0aW9uKHcsZCxzLGwsaSl7d1tsXT13W2xdfHxbXTt3W2xdLnB1c2goeydndG0uc3RhcnQnOg0KbmV3IERhdGUoKS5nZXRUaW1lKCksZXZlbnQ6J2d0bS5qcyd9KTt2YXIgZj1kLmdldEVsZW1lbnRzQnlUYWdOYW1lKHMpWzBdLA0Kaj1kLmNyZWF0ZUVsZW1lbnQocyksZGw9bCE9J2RhdGFMYXllcic/JyZsPScrbDonJztqLmFzeW5jPXRydWU7ai5zcmM9DQonaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RtLmpzP2lkPScraStkbDtmLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGosZik7DQp9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJ2RhdGFMYXllcicsJ0dUTS1LNExHNDJXJyk7"></script>
+
+
+<script async data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=AW-589681044"></script>
+<script data-type="lazy" data-src="data:text/javascript;base64,DQogIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdOw0KICBmdW5jdGlvbiBndGFnKCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKTt9DQogIGd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQoNCiAgZ3RhZygnY29uZmlnJywgJ0FXLTU4OTY4MTA0NCcpOw0K"></script>
+
+<script data-type="lazy" data-src="data:text/javascript;base64,DQogIGd0YWcoJ2V2ZW50JywgJ2NvbnZlcnNpb24nLCB7J3NlbmRfdG8nOiAnQVctNTg5NjgxMDQ0L2tFUlNDTUtVX29BQ0VKU2psNWtDJ30pOw0K"></script>
+<link rel="preload" as="font" href="https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0" crossorigin>
+<link rel="preload" as="font" href="https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="font" href="https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2" crossorigin><link rel="icon" href="https://estetikcursos.com.br/wp-content/uploads/2020/12/cropped-Logo-K-Novo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://estetikcursos.com.br/wp-content/uploads/2020/12/cropped-Logo-K-Novo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://estetikcursos.com.br/wp-content/uploads/2020/12/cropped-Logo-K-Novo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://estetikcursos.com.br/wp-content/uploads/2020/12/cropped-Logo-K-Novo-270x270.png" />
+<style type="text/css" id="wp-custom-css">
+			::selection {
+background-color: #54595f;
+color: #fff;
+}		</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="page-template page-template-elementor_canvas page page-id-919 elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-919">
+<script data-cfasync="false">if(ewww_webp_supported){document.body.classList.add("webp-support");}</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4LG42W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <div data-elementor-type="wp-page" data-elementor-id="919" class="elementor elementor-919" data-elementor-settings="[]">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-b37170e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b37170e" data-element_type="section" id="top" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c3038a5" data-id="c3038a5" data-element_type="column" id="menu">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-0db72d8 logo elementor-widget elementor-widget-heading" data-id="0db72d8" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><a href="https://api.whatsapp.com/send?phone=5511983113384&#038;text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20curso%20de%20Micropigmenta%C3%A7%C3%A3o%20Capilar.">Curso ead<span style="color:#E3C056"> Micropigmentação Capilar</span></a></h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1738c8d0 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="1738c8d0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;opacity-tilt&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 2600 131.1" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0 0L2600 0 2600 69.1 0 0z" />
+<path class="elementor-shape-fill" style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z" />
+<path class="elementor-shape-fill" style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z" />
+</svg> </div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6506f0b4" data-id="6506f0b4" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-aa053d4 elementor-hidden-desktop elementor-hidden-tablet elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="aa053d4" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Eleve sua profissão para um outro nível e conquiste muitos clientes</h2> </div>
+</div>
+<div class="elementor-element elementor-element-15da357 elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="15da357" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Eleve sua profissão para</h2> </div>
+</div>
+<div class="elementor-element elementor-element-1e95013 elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="1e95013" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"> um outro nível e conquiste muitos clientes​</h2> </div>
+</div>
+<div class="elementor-element elementor-element-13a0b7da elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="13a0b7da" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=0WjyFX2-ZpQ&amp;feature=youtu.be&quot;,&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;https:\/\/estetikcursos.com.br\/wp-content\/uploads\/2020\/08\/Capa-Video-Micro-Capilar.png&quot;,&quot;id&quot;:2320},&quot;lazy_load&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+<div class="elementor-widget-container">
+<div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+<div class="elementor-video"></div> <div class="elementor-custom-embed-image-overlay" style="background-image: url(https://estetikcursos.com.br/wp-content/uploads/2020/08/Capa-Video-Micro-Capilar.png);">
+<div class="elementor-custom-embed-play" role="button">
+<i class="eicon-play" aria-hidden="true"></i>
+<span class="elementor-screen-only">Reproduzir vídeo</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6f1874be elementor-align-center elementor-widget elementor-widget-button" data-id="6f1874be" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="#preco" class="elementor-button-link elementor-button elementor-size-xl elementor-animation-sink" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">QUERO ME INSCREVER </span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-2f29385f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2f29385f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-21cb83a5" data-id="21cb83a5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-67c1c520 elementor-widget elementor-widget-heading" data-id="67c1c520" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">MELHOR INVESTIMENTO DE SUA CARREIRA
+</h2> </div>
+</div>
+<div class="elementor-element elementor-element-542e3728 elementor-widget elementor-widget-heading" data-id="542e3728" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">A Micropigmentação Capilar é a <span style="background-color: #E3C056;color:#FFFFFF">Mais Nova e Mais EFICAZ técnica</span> para calvície.</h2> </div>
+</div>
+<div class="elementor-element elementor-element-1b1054ae elementor-widget elementor-widget-heading" data-id="1b1054ae" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">As <span style="background-color: #E3C056;color:#FFFFFF">vantagens</span> são inúmeras em relação a outros procedimentos, principalmente por dispensar cirurgias agressivas e com longos tempos de cicatrização, pois é <span style="background-color: #E3C056;color:#FFFFFF">rápida</span> - o resultado é <span style="background-color: #E3C056;color:#FFFFFF">imediato</span> e com apenas 2 no máximo 3 sessões já é possível ter o efeito desejado.</h2> </div>
+</div>
+<div class="elementor-element elementor-element-1d5ce644 elementor-widget elementor-widget-heading" data-id="1d5ce644" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><span style="background-color: #A82828;color:#FFF">Nosso compromisso é você!
+</span></h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-71fca82e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="71fca82e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1385302" data-id="1385302" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1805659b logo elementor-widget elementor-widget-heading" data-id="1805659b" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">O QUE IREI APRENDER NESSE CURSO?
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-34136050 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="34136050" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-13ea37cd" data-id="13ea37cd" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-01bbc73 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="01bbc73" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Estatística.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Contra Indicações Da Micropigmentação Capilar.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Micropigmentação Capilar.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Indicações Pré Procedimento.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Colorimetria Aplicada Para Micropigmentação Capilar.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7ad479f" data-id="7ad479f" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7eb11e5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7eb11e5" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Design Personalizado Com Linha (Técnica Exclusiva).</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Aparelhos E Agulhas.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Técnicas Tipo A E Tipo B (Técnicas Exclusivas).</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Regras De Ouro.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check-square"></i> </span>
+<span class="elementor-icon-list-text">Anamnese.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-9e19df7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9e19df7" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-66090d7b" data-id="66090d7b" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-e317280 logo elementor-widget elementor-widget-heading" data-id="e317280" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">EXEMPLO DE UMA DAS AULAS DO CURSO:</h2> </div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-bf1eb7a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bf1eb7a" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-65eb1ee0" data-id="65eb1ee0" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-67572fe7 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="67572fe7" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=Y1cTMmONI6w&amp;feature=youtu.be&quot;,&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;https:\/\/estetikcursos.com.br\/wp-content\/uploads\/2020\/07\/CAPA-01-1.jpg&quot;,&quot;id&quot;:1009},&quot;lazy_load&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
+<div class="elementor-widget-container">
+<div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+<div class="elementor-video"></div> <div class="elementor-custom-embed-image-overlay" style="background-image: url(https://estetikcursos.com.br/wp-content/uploads/2020/07/CAPA-01-1.jpg);">
+<div class="elementor-custom-embed-play" role="button">
+<i class="eicon-play" aria-hidden="true"></i>
+<span class="elementor-screen-only">Reproduzir vídeo</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-558df01c fundo-fixo elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="558df01c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;tilt&quot;,&quot;shape_divider_top&quot;:&quot;triangle&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-shape elementor-shape-top" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z" />
+</svg> </div>
+<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68636d18" data-id="68636d18" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7e452f1d elementor-widget elementor-widget-heading" data-id="7e452f1d" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">O que você vai receber:
+</h2> </div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-042d841 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="042d841" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-c202cf5" data-id="c202cf5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-ad5e80d elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="ad5e80d" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Certificado" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Certificado-1.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Certificado-1.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Certificado-1.png" class="attachment-full size-full" alt="Certificado" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">CERTIFICADO</h3><p class="elementor-image-box-description">Você receberá um lindo Certificado de Conclusão assinado por Michel Santana e pela Larissa Braun.</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-fe35812" data-id="fe35812" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7765964 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="7765964" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Desktop" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Desktop-1.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Desktop-1.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Desktop-1.png" class="attachment-full size-full" alt="Desktop" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">21 VÍDEO AULAS PROFISSIONAIS</h3><p class="elementor-image-box-description">Aulas teóricas e práticas online. Procedimentos realizados em Modelos Passo a Passo. Assista quantas vezes quiser.</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6f9dd1c" data-id="6f9dd1c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-afd4f56 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="afd4f56" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Apostila" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Apostila-Cap.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Apostila-Cap.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Apostila-Cap.png" class="attachment-full size-full" alt="Apostila" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">MATERIAL DE APOIO</h3><p class="elementor-image-box-description">Materiais em PDF para baixar e estudar em complemento às video aulas.</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-bc1ad7e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bc1ad7e" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0d852db" data-id="0d852db" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-622eada elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="622eada" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Lista" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Lista-1.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Lista-1.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Lista-1.png" class="attachment-full size-full" alt="Lista" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"> LISTA DE FORNECEDORES E MATERIAIS</h3><p class="elementor-image-box-description">Acesso à Lista de Materiais e Produtos com valor especial para Alunos(as).</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-f01d3b3" data-id="f01d3b3" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-ac73547 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="ac73547" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Internet" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Internet-1.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Internet-1.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Internet-1.png" class="attachment-full size-full" alt="Internet" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">ACESSO ONLINE</h3><p class="elementor-image-box-description">Acesso à plataforma do curso pelo portal da Hotmart. Você poderá assistir quantas vezes quiser.</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ddf23b0" data-id="ddf23b0" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-c697836 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="c697836" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="128" height="128" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="WhatsApp" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/WhatsApp.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/WhatsApp.png.webp" data-eio="j" /><noscript><img width="128" height="128" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/WhatsApp.png" class="attachment-full size-full" alt="WhatsApp" loading="lazy" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">SUPORTE ESPECIALIZADO</h3><p class="elementor-image-box-description">Suporte especializado e individualizado junto ao nosso time de especialistas para tirar qualquer dúvida do curso.</p></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </div>
+</section>
+<div class="elementor-element elementor-element-3f17db39 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="3f17db39" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6f9bd249 elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="6f9bd249" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;bounceIn&quot;}" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://go.hotmart.com/R42016571O?ap=f964" class="elementor-button-link elementor-button elementor-size-xl elementor-animation-shrink" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">QUERO ME INSCREVER </span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-a80afcb elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="a80afcb" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">De <span style="text-decoration:line-through">R$599</span> por R$79 / até 6x de R$14,34 </h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-683ca18 fundo-fixo elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="683ca18" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;tilt&quot;,&quot;shape_divider_bottom&quot;:&quot;tilt&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-shape elementor-shape-top" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9cb7e1a" data-id="9cb7e1a" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-5c6cb24 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5c6cb24" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-97cc741" data-id="97cc741" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-200e6793 elementor-widget elementor-widget-image" data-id="200e6793" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="600" height="600" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Larissa Braum" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg.webp 600w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-300x300.jpg.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-150x150.jpg.webp 150w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg 600w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-300x300.jpg 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-150x150.jpg 150w" data-eio="j" /><noscript><img width="600" height="600" src="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg" class="attachment-full size-full" alt="Larissa Braum" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar.jpg 600w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-300x300.jpg 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Larissa-Braum-Micro-Capilar-150x150.jpg 150w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-035ff0a" data-id="035ff0a" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-21a03b9 elementor-widget elementor-widget-heading" data-id="21a03b9" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">LARISSA BRAUM</h2> </div>
+</div>
+<div class="elementor-element elementor-element-193db918 elementor-widget elementor-widget-text-editor" data-id="193db918" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p>A Micropigmentação Capilar é a mais nova e mais eficaz técnica para calvície. As vantagens são inúmeras em relação a outros procedimentos, principalmente por dispensar cirurgias agressivas e com longos tempos de cicatrização, pois é rápida &#8211; o resultado é imediato e com apenas 2 no máximo 3 sessões já é possível ter o efeito desejado.<br />Nosso compromisso é você!</p> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-370ef738 fundo-fixo elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="370ef738" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;tilt&quot;,&quot;shape_divider_bottom&quot;:&quot;tilt&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-shape elementor-shape-top" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-592810d" data-id="592810d" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-356f3c8f elementor-view-default elementor-widget elementor-widget-icon" data-id="356f3c8f" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+<i aria-hidden="true" class="fas fa-quote-right"></i> </div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-411488e7 elementor-widget elementor-widget-heading" data-id="411488e7" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Qual Objetivo desse curso?</h2> </div>
+</div>
+<div class="elementor-element elementor-element-57602d81 elementor-widget elementor-widget-text-editor" data-id="57602d81" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p>Transformar a vida das pessoas! Não quero apenas dar cursos, quero mudar a sua vida. Dediquei todo meu trabalho nesse curso. Coloquei todo meu conhecimento aqui.</p> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-19d2fd elementor-view-default elementor-widget elementor-widget-icon" data-id="19d2fd" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+<i aria-hidden="true" class="fas fa-quote-right"></i> </div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-21b73282 elementor-widget elementor-widget-heading" data-id="21b73282" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">O que Você Busca?</h2> </div>
+</div>
+<div class="elementor-element elementor-element-151b705f elementor-widget elementor-widget-text-editor" data-id="151b705f" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p>Você busca aprender uma nova profissão? Você busca se especializar? Quer aprender uma nova Técnica? Quer mudar sua Vida como Mudou a Minha?</p> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6d99695e elementor-view-default elementor-widget elementor-widget-icon" data-id="6d99695e" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+<i aria-hidden="true" class="fas fa-quote-right"></i> </div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-666231fb elementor-widget elementor-widget-heading" data-id="666231fb" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Esse Curso Serve para Mim?</h2> </div>
+</div>
+<div class="elementor-element elementor-element-3d01ea46 elementor-widget elementor-widget-text-editor" data-id="3d01ea46" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p>Esse curso foi desenvolvido tanto para aquelas pessoas que querem uma nova profissão quanto para profissionais que querem se especializar.</p> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-5aa23315 fundo-fixo elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5aa23315" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;tilt&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-shape elementor-shape-top" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+<path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
+</svg> </div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-417d2519" data-id="417d2519" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-55475328 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="55475328" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6fbfd068" data-id="6fbfd068" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7a38070 elementor-widget elementor-widget-heading" data-id="7a38070" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><span style="background-color:#fff">CERTIFICADO</span></h2> </div>
+</div>
+<div class="elementor-element elementor-element-92520f5 elementor-widget elementor-widget-heading" data-id="92520f5" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Receba um lindo Certificado Personalizado e válido em todo o território Nacional.</h2> </div>
+</div>
+<div class="elementor-element elementor-element-4329d7ec elementor-widget elementor-widget-heading" data-id="4329d7ec" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Você receberá um lindo Certificado de Conclusão assinado por Michel Santana e pela Larissa Braun.</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-213ada2b" data-id="213ada2b" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-65fbf499 elementor-widget elementor-widget-image" data-id="65fbf499" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="842" height="595" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Certificado" loading="lazy" sizes="(max-width: 842px) 100vw, 842px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png.webp 842w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-300x212.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-768x543.png.webp 768w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png 842w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-300x212.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-768x543.png 768w" data-eio="j" /><noscript><img width="842" height="595" src="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png" class="attachment-full size-full" alt="Certificado" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4.png 842w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-300x212.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Certificado-4-768x543.png 768w" sizes="(max-width: 842px) 100vw, 842px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-551a25c7 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="551a25c7" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-15837a0c elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="15837a0c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;bounceIn&quot;}" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://go.hotmart.com/R42016571O?ap=f964" class="elementor-button-link elementor-button elementor-size-xl elementor-animation-shrink" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">QUERO ME INSCREVER</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-79c88360 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="79c88360" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">De <span style="text-decoration:line-through">R$599</span> por R$79 / até 6x de R$14,34 </h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-364645a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="364645a8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1a33155b" data-id="1a33155b" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-70a34da0 logo elementor-widget elementor-widget-heading" data-id="70a34da0" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Larissa Braun tirando dúvidas sobre o curso:</h2> </div>
+</div>
+<div class="elementor-element elementor-element-10ecd89f elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="10ecd89f" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Arraste pro lado &raquo</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1703e308 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1703e308" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-468bd8cb" data-id="468bd8cb" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-2e2e7e4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2e2e7e4" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8f22bec" data-id="8f22bec" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-c72480c elementor-skin-carousel elementor-widget elementor-widget-media-carousel" data-id="c72480c" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;skin&quot;:&quot;carousel&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="media-carousel.default">
+<div class="elementor-widget-container">
+<div class="elementor-swiper">
+<div class="elementor-main-swiper swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="https://estetikcursos.com.br/wp-content/uploads/2020/07/Dúvida-01.jpg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="c72480c" data-elementor-lightbox-title="Dúvida 01" data-elementor-lightbox-video="https://www.youtube.com/embed/Ey-Js9S9hcM?feature=oembed&amp;autoplay=1&amp;rel=0&amp;controls=0"> <div class="elementor-carousel-image" style="background-image: url(https://estetikcursos.com.br/wp-content/uploads/2020/07/Dúvida-01.jpg)">
+<div class="elementor-custom-embed-play">
+<i class="eicon-play" aria-hidden="true"></i>
+<span class="elementor-screen-only">Reproduzir</span>
+</div>
+</div>
+</a> </div>
+<div class="swiper-slide">
+<a href="https://estetikcursos.com.br/wp-content/uploads/2020/07/Dúvida-02-1.jpg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="c72480c" data-elementor-lightbox-title="Dúvida 02" data-elementor-lightbox-video="https://www.youtube.com/embed/fBnUhAsQSJk?feature=oembed&amp;autoplay=1&amp;rel=0&amp;controls=0"> <div class="elementor-carousel-image" style="background-image: url(https://estetikcursos.com.br/wp-content/uploads/2020/07/Dúvida-02-1.jpg)">
+<div class="elementor-custom-embed-play">
+<i class="eicon-play" aria-hidden="true"></i>
+<span class="elementor-screen-only">Reproduzir</span>
+</div>
+</div>
+</a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-2740b47c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2740b47c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-69254c52" data-id="69254c52" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-4a812cd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4a812cd" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a4de619" data-id="a4de619" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-b7993cb elementor-widget elementor-widget-image" data-id="b7993cb" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="260" height="231" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="" loading="lazy" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/7-Dias-Garantia-PB01.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/7-Dias-Garantia-PB01.png.webp" data-eio="j" /><noscript><img width="260" height="231" src="https://estetikcursos.com.br/wp-content/uploads/2020/07/7-Dias-Garantia-PB01.png" class="attachment-full size-full" alt="" loading="lazy" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-db72e59" data-id="db72e59" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7aed9c2 elementor-widget elementor-widget-heading" data-id="7aed9c2" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">O Risco é todo Nosso!
+</h2> </div>
+</div>
+<div class="elementor-element elementor-element-444303c elementor-widget elementor-widget-heading" data-id="444303c" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Acreditamos tanto na qualidade do nosso produto que te damos 7 dias de garantia e se não gostar devolveremos 100% do valor pago.
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7ff05670 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7ff05670" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6ffda680" data-id="6ffda680" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-112c026f elementor-widget elementor-widget-heading" data-id="112c026f" data-element_type="widget" id="preco" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h1 class="elementor-heading-title elementor-size-default">
+PROMOÇÃO RELÂMPAGO
+</h1> </div>
+</div>
+<div class="elementor-element elementor-element-2bd19cf7 elementor-widget-divider--view-line_icon elementor-view-default elementor-widget-divider--element-align-center elementor-widget elementor-widget-divider" data-id="2bd19cf7" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+<div class="elementor-icon elementor-divider__element">
+<i aria-hidden="true" class="fas fa-star"></i></div>
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-7a024e22 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="7a024e22" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">De <span style="text-decoration:line-through;color:red">R$599</span> por <span style="color:#00A752"> R$79 </span> / até 6x de R$14,34</h2> </div>
+</div>
+<div class="elementor-element elementor-element-4ef9009c elementor-align-center elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4ef9009c" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> CERTIFICADO DE CONCLUSÃO </span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> 21 VIDEOAULAS </span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> DESCONTO EM PRODUTOS PEELFARMA </span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> PROFESSORA HABILITADA</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> SUPORTE INDIVIDUAL POR WHATSAPP </span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text"> VAGAS LIMITADAS </span>
+</li>
+</ul>
+</div>
+</div>
+<div class="elementor-element elementor-element-705f23c5 elementor-widget elementor-widget-progress" data-id="705f23c5" data-element_type="widget" data-widget_type="progress.default">
+<div class="elementor-widget-container">
+<div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="98" aria-valuetext="ÚLTIMAS VAGAS NA PROMOÇÃO">
+<div class="elementor-progress-bar" data-max="98">
+<span class="elementor-progress-text">ÚLTIMAS VAGAS NA PROMOÇÃO</span>
+<span class="elementor-progress-percentage">98%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-2ac80bd elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="2ac80bd" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;bounceIn&quot;}" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://go.hotmart.com/R42016571O?ap=f964" class="elementor-button-link elementor-button elementor-size-xl elementor-animation-shrink" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">COMPRAR AGORA</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-83341ef elementor-widget elementor-widget-image" data-id="83341ef" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="1007" height="250" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="" loading="lazy" sizes="(max-width: 1007px) 100vw, 1007px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png.webp 1007w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-300x74.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-768x191.png.webp 768w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png 1007w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-300x74.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-768x191.png 768w" data-eio="j" /><noscript><img width="1007" height="250" src="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png" class="attachment-full size-full" alt="" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1.png 1007w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-300x74.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Forma-Pagto-04-1-1-768x191.png 768w" sizes="(max-width: 1007px) 100vw, 1007px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-98755c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="98755c4" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d339922" data-id="d339922" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-eaee474 elementor-widget-divider--view-line_icon elementor-view-default elementor-widget-divider--element-align-center elementor-widget elementor-widget-divider" data-id="eaee474" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+<div class="elementor-icon elementor-divider__element">
+<i aria-hidden="true" class="fas fa-angle-down"></i></div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-5092333b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5092333b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ce56938" data-id="3ce56938" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-741af3c elementor-widget elementor-widget-heading" data-id="741af3c" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">DÚVIDAS FREQUENTES</h2> </div>
+</div>
+<div class="elementor-element elementor-element-56d2d047 elementor-widget elementor-widget-toggle" data-id="56d2d047" data-element_type="widget" data-widget_type="toggle.default">
+<div class="elementor-widget-container">
+<div class="elementor-toggle" role="tablist">
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-1451" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1451" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+</span>
+<a href="" class="elementor-toggle-title">O valor acima é o único que irei pagar?</a>
+</div>
+<div id="elementor-tab-content-1451" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1451"><p>Sim. esse valor lhe dá direito completo de acesso ao curso.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-1452" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-1452" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+</span>
+<a href="" class="elementor-toggle-title">PRECISO SER BARBEIRO PARA FAZER ESSE CURSO?</a>
+</div>
+<div id="elementor-tab-content-1452" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1452"><p>Não. Com nossa técnica exclusiva qualquer profissional da estética ou saúde pode realizar o procedimento com segurança absoluta e qualidade garantida.<br /><br /><br /></p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-1453" class="elementor-tab-title" data-tab="3" role="tab" aria-controls="elementor-tab-content-1453" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+</span>
+<a href="" class="elementor-toggle-title">Será que vai compensar esse investimento para mim?</a>
+</div>
+<div id="elementor-tab-content-1453" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1453"><p>Com certeza, sim! Esse curso está com um valor incrivelmente baixo. Recomendamos que você cobre no mínimo R$800 por sessão de Micropigmetnação Capilar, ou seja, já na primeira sessão você paga todo o investimento tranquilamente</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-1454" class="elementor-tab-title" data-tab="4" role="tab" aria-controls="elementor-tab-content-1454" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+</span>
+<a href="" class="elementor-toggle-title">Como funciona a emissão dos Certificado?</a>
+</div>
+<div id="elementor-tab-content-1454" class="elementor-tab-content elementor-clearfix" data-tab="4" role="tabpanel" aria-labelledby="elementor-tab-title-1454"><p>Quando você finalizar o curso você estará habilitado(a) para a prática da técnica ensinada e seu certificado estará disponível na plataforma.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-1455" class="elementor-tab-title" data-tab="5" role="tab" aria-controls="elementor-tab-content-1455" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+</span>
+<a href="" class="elementor-toggle-title">Quanto tempo leva para eu poder utilizar à partir da minha compra?</a>
+</div>
+<div id="elementor-tab-content-1455" class="elementor-tab-content elementor-clearfix" data-tab="5" role="tabpanel" aria-labelledby="elementor-tab-title-1455"><p>Com a compra feita em cartão de crédito, em poucos minutos você já receberá os dados de acesso em seu e-mail automaticamente.</p></div>
+</div>
+</div>
+</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-19ff597 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="19ff597" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-183e0f2c" data-id="183e0f2c" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-393c8c5f elementor-widget elementor-widget-image" data-id="393c8c5f" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="300" height="300" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-medium size-medium ewww_webp" alt="" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-300x300.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-300x300.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-150x150.png.webp 150w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-150x150.png 150w" data-eio="j" /><noscript><img width="300" height="300" src="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Telemarketing-7-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-228cac44 elementor-widget elementor-widget-heading" data-id="228cac44" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">
+Dúvidas? Mande uma mensagem via WhatsApp e responderei o mais breve possível.
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-632277e6" data-id="632277e6" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5a27310b elementor-widget elementor-widget-image" data-id="5a27310b" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://api.whatsapp.com/send?phone=5511953588558&#038;text=Seja%20Bem%20Vinda%20a%20Est%C3%A9tikCursos!">
+<img width="800" height="281" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="elementor-animation-shrink attachment-large size-large ewww_webp" alt="Atendimento WhatsApp" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png.webp 932w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-300x105.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-768x269.png.webp 768w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png 932w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-300x105.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-768x269.png 768w" data-eio="j" /><noscript><img width="800" height="281" src="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png" class="elementor-animation-shrink attachment-large size-large" alt="Atendimento WhatsApp" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp.png 932w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-300x105.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/07/Atendimento-WhatsApp-768x269.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></noscript> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-6e8f359e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6e8f359e" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7e632a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7e632a1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-98d1dd2" data-id="98d1dd2" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1b388ff elementor-widget elementor-widget-html" data-id="1b388ff" data-element_type="widget" data-widget_type="html.default">
+<div class="elementor-widget-container">
+<script id="hotmart_launcher_script">
+			(function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){
+			(l[c].q=l[c].q||[]).push(arguments)},l[c].l=1*new Date();h=a.createElement(u),
+			e=a.getElementsByTagName(u)[0];h.async=1;h.src=n;e.parentNode.insertBefore(h,e)
+			})(window,document,'script','//launcher.hotmart.com/launcher.js','hot');
+
+			hot('account','acaed076-53d6-42d9-9d59-4059385942d9');
+		</script> </div>
+</div>
+<div class="elementor-element elementor-element-793d59f elementor-widget elementor-widget-text-editor" data-id="793d59f" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p>Nenhuma informação contida neste produto deve ser interpretada como uma afirmação da obtenção de resultados. Qualquer referência ao desempenho passado ou potencial de uma estratégia abordada no conteúdo não é, e não deve ser interpretada como uma recomendação ou como garantia de qualquer resultado específico.</p> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-8434c9c elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="8434c9c" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-aedf74a elementor-widget elementor-widget-heading" data-id="aedf74a" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><a href="https://estetikcursos.com/politica-de-privacidade/">Política de Privacidade</a></h2> </div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-bd2d3f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bd2d3f2" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-97beff0" data-id="97beff0" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3bc2722 botao-chat elementor-widget__width-auto elementor-fixed animated-fast elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-invisible elementor-widget elementor-widget-button" data-id="3bc2722" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;,&quot;_animation&quot;:&quot;bounceIn&quot;,&quot;_animation_delay&quot;:2000}" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjEyMzcyIiwidG9nZ2xlIjpmYWxzZX0%3D" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-icon elementor-align-icon-right">
+<i aria-hidden="true" class="fas fa-comment-dots"></i> </span>
+<span class="elementor-button-text">Assistente Estétik</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script async src="https://radar.cedexis.com/1/11475/radar.js"></script> <div data-elementor-type="popup" data-elementor-id="12372" class="elementor elementor-12372 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;zoomIn&quot;,&quot;entrance_animation_tablet&quot;:&quot;zoomIn&quot;,&quot;entrance_animation_mobile&quot;:&quot;zoomIn&quot;,&quot;exit_animation&quot;:&quot;fadeInUp&quot;,&quot;exit_animation_tablet&quot;:&quot;fadeInUp&quot;,&quot;exit_animation_mobile&quot;:&quot;fadeInUp&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.5,&quot;sizes&quot;:[]},&quot;timing&quot;:[]}">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7b0a873 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="7b0a873" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-459e49bd" data-id="459e49bd" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-646b731c elementor-widget elementor-widget-image" data-id="646b731c" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="800" height="368" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-large size-large ewww_webp" alt="Logotipo EstétikCursos" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png.webp 870w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-300x138.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-768x353.png.webp 768w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png 870w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-300x138.png 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-768x353.png 768w" data-eio="j" /><noscript><img width="800" height="368" src="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png" class="attachment-large size-large" alt="Logotipo EstétikCursos" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco.png 870w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-300x138.png 300w, https://estetikcursos.com.br/wp-content/uploads/2021/05/Logotipo-EstetikCursos-Branco-768x353.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-76f8f4c8" data-id="76f8f4c8" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7581d979 elementor-widget elementor-widget-heading" data-id="7581d979" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Assistente Estétik</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-359a023f" data-id="359a023f" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-9c4b591 elementor-hidden-desktop elementor-hidden-tablet elementor-view-default elementor-widget elementor-widget-icon" data-id="9c4b591" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+<i aria-hidden="true" class="far fa-times-circle"></i> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7d41a9ab elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7d41a9ab" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-15eeb9ee" data-id="15eeb9ee" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-4c2880e1 elementor-widget elementor-widget-html" data-id="4c2880e1" data-element_type="widget" data-widget_type="html.default">
+<div class="elementor-widget-container">
+<script samesite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+<div id="myLandbot" style="width: 100%; height: 500px"></div>
+<script>
+  var myLandbot = new LandbotFrameWidget({
+    container: '#myLandbot',
+    index: 'https://chats.landbot.io/v2/H-761867-53ZL1FLZ9BPZ1CEG/index.html',
+  });
+</script> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-48e89361 elementor-section-height-min-height elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="48e89361" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-222ce68" data-id="222ce68" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-42c50027 elementor-section-height-min-height elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="42c50027" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f149a5f" data-id="f149a5f" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-32a745ff elementor-widget elementor-widget-eael-creative-button" data-id="32a745ff" data-element_type="widget" data-widget_type="eael-creative-button.default">
+<div class="elementor-widget-container">
+<div class="eael-creative-button-wrapper">
+<a class="eael-creative-button eael-creative-button--default" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9" data-text="">
+<div class="creative-button-inner">
+<span class="eael-creative-button-icon-left"><i aria-hidden="true" class="fas fa-window-close"></i></span>
+<span class="cretive-button-text">FECHAR</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div data-elementor-type="popup" data-elementor-id="15976" class="elementor elementor-15976 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInUp&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;prevent_close_on_esc_key&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;page_load_delay&quot;:0.5,&quot;page_load&quot;:&quot;yes&quot;},&quot;timing&quot;:[]}">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-23f4eb8 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="23f4eb8" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fc3ff58" data-id="fc3ff58" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1858298 elementor-widget elementor-widget-text-editor" data-id="1858298" data-element_type="widget" id="link-cookie" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+Ao continuar navegando você concorda com <a href="https://estetikcursos.com.br/politica-de-privacidade/">Política de Privacidade</a> deste site. </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-c4e2944 elementor-button-info elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="c4e2944" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6InllcyJ9" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">CONCORDAR E FECHAR</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div data-elementor-type="popup" data-elementor-id="9361" class="elementor elementor-9361 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInUp&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation_mobile&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:[]}">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-28c4440e elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="28c4440e" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6f4eb351" data-id="6f4eb351" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2dc24c47 elementor-widget elementor-widget-image" data-id="2dc24c47" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="870" height="400" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-full size-full ewww_webp" alt="Logo EstétikCursos" loading="lazy" sizes="(max-width: 870px) 100vw, 870px" data-src-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png" data-src-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png.webp" data-srcset-webp="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png.webp 870w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-300x138.png.webp 300w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-768x353.png.webp 768w" data-srcset-img="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png 870w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-300x138.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-768x353.png 768w" data-eio="j" /><noscript><img width="870" height="400" src="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png" class="attachment-full size-full" alt="Logo EstétikCursos" loading="lazy" srcset="https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO.png 870w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-300x138.png 300w, https://estetikcursos.com.br/wp-content/uploads/2020/12/Logo-Roxo-e-Laranja-NOVO-768x353.png 768w" sizes="(max-width: 870px) 100vw, 870px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1e3534d" data-id="1e3534d" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-204cfa48 coockies elementor-widget elementor-widget-heading" data-id="204cfa48" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Ao continuar navegando você concorda com a <a href="https://estetikcursos.com.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a> deste site.
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-31e0ef0c" data-id="31e0ef0c" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-39bd9fe6 elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="39bd9fe6" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6InllcyJ9" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">ACEITO&nbspOS<br>COOCKIES</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div data-elementor-type="popup" data-elementor-id="9519" class="elementor elementor-9519 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;zoomIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.5,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:[]}">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-794d86dc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="794d86dc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4c9ced53" data-id="4c9ced53" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3b3f7f47 elementor-widget elementor-widget-heading" data-id="3b3f7f47" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Conteúdo Curso Masterclass Hyalips
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-383b5ca1" data-id="383b5ca1" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5f32b442 elementor-view-default elementor-widget elementor-widget-icon" data-id="5f32b442" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+<i aria-hidden="true" class="far fa-window-close"></i> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-373fa7bc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="373fa7bc" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-369694f3" data-id="369694f3" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-62d95b3b elementor-widget elementor-widget-heading" data-id="62d95b3b" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">VOCÊ IRÁ APRENDER:</h2> </div>
+</div>
+<div class="elementor-element elementor-element-573f96e6 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="573f96e6" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">mecanismo do hyaluron pen.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">demonstração de utilização dos produtos.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">introdução: hyalips.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">exame clínico.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">investimento.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">planejamento padrão de técnica.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">intercorrência hyaluron pen.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">anatomia labial.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">histologia.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">aulas práticas com modelo joven e registro fotográfico.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">aplicação do filler.</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">finalização do procedimento.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="elementor-element elementor-element-8a9d31d elementor-widget elementor-widget-heading" data-id="8a9d31d" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Curso apostilado, certificado de qualificação.</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div data-elementor-type="popup" data-elementor-id="211" class="elementor elementor-211 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;zoomIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.5,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:[]}">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-58ee6f86 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="58ee6f86" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-19be921" data-id="19be921" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3055d47a elementor-widget elementor-widget-heading" data-id="3055d47a" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Conteúdo Curso Tratamento de Acne
+</h2> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c4f0b05" data-id="c4f0b05" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6ba5422 elementor-view-default elementor-widget elementor-widget-icon" data-id="6ba5422" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+<i aria-hidden="true" class="far fa-window-close"></i> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-45b4461d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45b4461d" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-435f1ca7" data-id="435f1ca7" data-element_type="column">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5e6c0f0f elementor-widget elementor-widget-heading" data-id="5e6c0f0f" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">VOCÊ IRÁ APRENDER:</h2> </div>
+</div>
+<div class="elementor-element elementor-element-14d45a3 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="14d45a3" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Tipos de Pele</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Ativos para Acne</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Características da Acne</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Profundidade a ser trabalhada</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Mapeamento do Rosto por espessura a ser trabalhada</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Posicionamento da máquina</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Técnicas de Microagulhamento</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Regulagem da agulha</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Pigmentos e Ativos</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Estímulo e Ativação de Colágeno</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Quantidade de Sessões Necessárias</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Agulhas certas para cada situação</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Ficha de Avaliação</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="fas fa-check"></i> </span>
+<span class="elementor-icon-list-text">Termo de Responsabilidade</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="elementor-element elementor-element-5cb7c5c9 elementor-widget elementor-widget-heading" data-id="5cb7c5c9" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Curso apostilado, certificado de qualificação.</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<link rel='stylesheet' id='elementor-post-12372-css' href='https://estetikcursos.com.br/wp-content/uploads/elementor/css/post-12372.css?ver=1633444522' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animations-css' href='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.4' type='text/css' media='all' />
+<script type='text/javascript' id='c769ebb36-js-extra'>
+/* <![CDATA[ */
+var localize = {"ajaxurl":"https:\/\/estetikcursos.com.br\/wp-admin\/admin-ajax.php","nonce":"ea1aecfb6e","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/uploads/essential-addons-elementor/c769ebb36.min.js?ver=1633660016' id='c769ebb36-js'></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/certificados\/|\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/estetikcursos.com.br","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-includes/js/wp-embed.min.js?ver=5.8.1' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.1.0' id='elementor-pro-webpack-runtime-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.4' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.4' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.1.0' id='elementor-sticky-js'></script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/estetikcursos.com.br\/wp-admin\/admin-ajax.php","nonce":"54f284b229","urls":{"assets":"https:\/\/estetikcursos.com.br\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"N\u00e3o foram encontrados cabe\u00e7alhos nesta p\u00e1gina."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/estetikcursos.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.1.0' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.4.4' id='share-link-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivo m\u00f3vel extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.4.4","is_static":false,"experimentalFeatures":{"e_import_export":true,"landing-pages":true,"elements-color-picker":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/estetikcursos.com.br\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":919,"title":"%5B07%5D%20Micropigmenta%C3%A7%C3%A3o%20Capilar%20%E2%80%93%20Est%C3%A9tikCursos","excerpt":"","featuredImage":"https:\/\/estetikcursos.com.br\/wp-content\/uploads\/2020\/12\/Logo-EstetikCursos-Destaque.png"}};
+</script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.4' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.1.0' id='pro-preloaded-elements-handlers-js'></script>
+<script type='text/javascript' src='https://estetikcursos.com.br/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.4' id='preloaded-modules-js'></script>
+<script type="text/javascript" id="flying-scripts">const loadScriptsTimer=setTimeout(loadScripts,5000*1000);const userInteractionEvents=["mouseover","keydown","touchstart","touchmove","wheel"];userInteractionEvents.forEach(function(event){window.addEventListener(event,triggerScriptLoader,{passive:!0})});function triggerScriptLoader(){loadScripts();clearTimeout(loadScriptsTimer);userInteractionEvents.forEach(function(event){window.removeEventListener(event,triggerScriptLoader,{passive:!0})})}
+function loadScripts(){document.querySelectorAll("script[data-type='lazy']").forEach(function(elem){elem.setAttribute("src",elem.getAttribute("data-src"))})}</script>
+<script>
+jQuery(function($){
+	var arg = {"tel":"5511952350423","msg":"Olá! Gostaria de saber mais sobre o curso de Micropigmentação Capilar.","web":true};
+	var via = arg.web && !navigator.userAgent.match(/Android|iPhone|BlackBerry|IEMobile|Opera Mini/i) ? 'web' : 'api';
+	$(document).on('click', '.joinchat_open,.joinchat_app,a[href="#whatsapp"],a[href="#joinchat"]', function(e){ e.preventDefault();
+		window.open('https://' + via + '.whatsapp.com/send?phone=' + encodeURIComponent(arg.tel) + '&text=' + encodeURIComponent(arg.msg), null, 'noopener');
+	});
+});
+</script>
+
+<iframe width="1" height="0"
+src="https://go.hotmart.com/R42016571O?ap=f964"></iframe>
+
+</body>
+</html>
